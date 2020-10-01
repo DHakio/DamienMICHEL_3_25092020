@@ -1,0 +1,21 @@
+@import "./Base/fonts";
+
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+
+@import "./Layout/header";
+@import "./Layout/_footer";
+
+@import "./Components/omf-button";
+
+@import "./Pages/index";
+
+BODY {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}

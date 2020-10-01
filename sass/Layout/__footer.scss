@@ -1,0 +1,21 @@
+.footer {
+    background-color: darken($color-grey, 76%);
+    color: white;
+    @include y-padding(2rem, 4rem);
+    @include x-padding(4rem);
+    &__title {
+        font-family: "Shrikhand";
+        font-size: 2.8em;
+    }
+    &__links {
+        @include x-padding(0);
+        list-style: none;
+        i {
+            width: 4rem;
+        }
+        li {
+            font-size: 2.5em;
+            @include y-margin(0.5em);
+        }
+    }
+}

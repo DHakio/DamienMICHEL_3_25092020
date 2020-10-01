@@ -1,0 +1,179 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    &__header {
+        background-color: darken($color-grey, 5%);
+        height: 8rem;
+        z-index: -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+
+        i, p {
+            margin-right: 2rem;
+            font-size: 2.5em;
+        }
+
+    }
+    &__main {
+        background-color: $color-grey;
+        @include  fixed-height(45rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        @include x-padding(4rem);
+        @include y-padding(7rem);
+
+        &__title {
+            @include y-margin(0);
+            @include title;
+            text-align: center;
+            width: 75%;
+        }
+
+        p {
+            @include y-margin(0);
+            margin-top: -4rem;
+            font-size: 2.8rem;
+            text-align: center;
+        }
+    }
+}
+
+
+
+.howto {
+    @include y-padding(3rem, 10rem);
+    @include x-padding(5rem, 3rem);
+    display: flex;
+    flex-direction: column;
+    &__title {
+        @include title;
+    }
+    &__step {
+        background-color: $color-grey;
+        margin-left: 2rem;
+        @include y-margin(1.5rem);
+        @include fixed-height(10rem);
+        @include shadow;
+        border-radius: 3rem;
+        display: flex;
+        align-items: center;
+        &__content {
+            margin-left: -2rem;
+            font-size: 2.5em;
+            font-weight: bold;
+            * {
+                margin-right: 2rem;
+            }
+            span {
+                background-color: $color-primary;
+                border-radius: 50%;
+                font-size: 0.8em;
+                color: white;
+                @include y-padding(0.5rem);
+                @include x-padding(1.2rem);
+            }
+        }
+    }
+    &_step--last {
+        background-color: lighten($color-primary, 35%);
+        i {
+            color: $color-primary;
+        }
+    }
+}
+
+
+.restaurants {
+    background-color: $color-grey;
+    @include x-padding(3rem);
+    @include y-padding(4rem, 7rem);
+    &__title {
+        @include title;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 3em;
+        overflow: hidden;
+        margin-bottom: 3rem;
+        @include shadow;
+        &__image {
+            position: relative;
+            height: 30em;
+            img {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            &__sticker {
+                position: absolute;
+                top: 2rem;
+                right: 2rem;
+                @include y-padding(1rem);
+                @include x-padding(2rem);
+                background-color: $color-tertiary;
+                color: darken($color-tertiary, 40%);
+                font-size: 2em;
+                font-weight: bold;
+                border-radius: 0.5rem;
+            }
+        }
+        &__label {
+            @include x-padding(2rem);
+            @include y-padding(2rem);
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+
+            div:nth-child(1) {
+                display: flex;
+                flex-direction: column;
+            }
+            div:nth-child(2) {
+                position: relative;
+                width: 7rem;
+            }
+            &__title, &__location {
+                font-size: 2.5em;
+                @include y-margin(0);
+            }
+            &__title {
+                margin-bottom: 0.5rem;
+                font-weight: bold;
+            }
+            &__heart {
+                font-size: 3.5em;
+                visibility: visible;
+                transition-property: visibility;
+                transition-duration: 200ms;
+                &--active {
+                    z-index: 10;
+                    font-size: 0px;
+                    background: linear-gradient($color-primary, $color-secondary);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    transition-property: font-size;
+                    transition-duration: 200ms;
+                }
+                &:hover {
+                    z-index: 11;
+                    visibility: hidden;
+                }
+                &:hover ~ &--active, &--active:hover {
+                    font-size: 3.5em;
+                }
+            }
+            &__heart, &__heart--active {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
