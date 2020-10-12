@@ -10,6 +10,40 @@ BODY {
   font-family: "Main";
 }
 
+@keyframes omf-loader {
+  96% {
+    transform: scale(1);
+  }
+  97% {
+    transform: scale(1.5);
+    fill: #99E2D0;
+  }
+  98% {
+    transform: scale(1);
+    fill: black;
+  }
+  99% {
+    transform: scale(1.5);
+    fill: #99E2D0;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes content {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 100rem;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+  }
+}
 @keyframes lines {
   from {
     opacity: 0;
@@ -49,6 +83,9 @@ BODY {
 }
 .header--next {
   align-content: unset;
+}
+.header--loader {
+  animation: omf-loader 1000ms 3;
 }
 
 .footer {
@@ -286,6 +323,16 @@ BODY {
 .restaurants__card__label__title {
   margin-bottom: 0.5rem;
   font-weight: bold;
+}
+
+.content-load {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  animation: content;
+  animation-fill-mode: forwards;
+  animation-duration: 1000ms;
+  animation-delay: 3000ms;
 }
 
 .menu__image {

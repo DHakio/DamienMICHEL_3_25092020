@@ -3,10 +3,47 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-grey: #f6f6f6;
 
+$loading-duration: 1000ms;
+$content-animation: 1000ms;
+@keyframes omf-loader {
+    96% {
+        transform: scale(1);
+    }
+    97% {
+        transform: scale(1.5);
+        fill: $color-tertiary;
+    }
+    98%{
+        transform: scale(1);
+        fill: black;
+    }
+    99% {
+        transform: scale(1.5);
+        fill: $color-tertiary;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes content {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 100rem;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+
 $line-nb: 10;
 $line-anim-duration: 2000ms;
 $line-delay: $line-anim-duration / $line-nb;
-
 @keyframes lines {
     from {
         opacity: 0;

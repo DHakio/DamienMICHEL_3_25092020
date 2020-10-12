@@ -24,4 +24,7 @@
     &--next {
         align-content: unset;
     }
+    &--loader {
+        animation: omf-loader $loading-duration 3
+    }
 }

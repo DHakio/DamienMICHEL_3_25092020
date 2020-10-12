@@ -149,3 +149,12 @@
         }
     }
 }
+.content-load {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    animation: content;
+    animation-fill-mode: forwards;
+    animation-duration: $content-animation;
+    animation-delay: 3000ms;
+}
