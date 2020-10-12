@@ -1,0 +1,25 @@
+.like {
+    position: relative;
+    height: 5rem;
+    width: 5rem;
+    &__icon {
+        font-size: 3.5em;
+        &--active {
+            font-size: 0px;
+            background: linear-gradient($color-primary, $color-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition-property: font-size;
+            transition-duration: 200ms;
+        }
+        &:hover ~ &--active, &--active:hover {
+            font-size: 3.2em;
+        }
+    }
+    &__icon, &__icon--active {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

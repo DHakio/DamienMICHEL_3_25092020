@@ -146,34 +146,6 @@
                 margin-bottom: 0.5rem;
                 font-weight: bold;
             }
-            &__heart {
-                font-size: 3.5em;
-                visibility: visible;
-                transition-property: visibility;
-                transition-duration: 200ms;
-                &--active {
-                    z-index: 10;
-                    font-size: 0px;
-                    background: linear-gradient($color-primary, $color-secondary);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    transition-property: font-size;
-                    transition-duration: 200ms;
-                }
-                &:hover {
-                    z-index: 11;
-                    visibility: hidden;
-                }
-                &:hover ~ &--active, &--active:hover {
-                    font-size: 3.5em;
-                }
-            }
-            &__heart, &__heart--active {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
         }
     }
 }

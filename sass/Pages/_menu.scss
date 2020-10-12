@@ -1,0 +1,82 @@
+.menu {
+    &__image {
+        height: 45rem;
+        position: relative;
+        img {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        &__title {
+            position: absolute;
+            top: 36rem;
+            width: 100.1%;
+            height: 10rem;
+            box-sizing: border-box;
+            border-radius: 5rem 5rem 0 0;
+            background-color: $color-grey;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            @include x-padding(4rem);
+            h1 {
+                font-family: "special";
+                @include title;
+                @include y-margin(0);
+            }
+        }
+    }
+    &__content {
+        background-color: $color-grey;
+        @include y-padding(1rem);
+        @include x-padding(4rem);
+        h2 {
+            @include y-margin(6rem, 0);
+            font-size: 2.5em;
+            font-weight: normal;
+        }
+        hr {
+            width: 6.5rem;
+            height: 0.4rem;
+            border: none;
+            background-color: $color-tertiary;
+            @include x-margin(0);
+            @include y-margin(1rem);
+        }
+        &__line {
+            background-color: white;
+            @include shadow;
+            box-sizing: border-box;
+            height: 10rem;
+            width: 100%;
+            border-radius: 2rem;
+            @include y-margin(2rem);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            @include x-padding(2rem, 3rem);
+            @include y-padding(2rem);
+            h3 {
+                width: 100%;
+                font-size: 2.5em;
+                @include y-margin(0);
+            }
+            p {
+                font-size: 2.2em;
+                @include y-margin(0);
+            }
+            :nth-child(3) {
+                font-weight: bold;
+            }
+        }
+        &__button {
+            display: flex;
+            justify-content: center;
+            @include y-margin(8rem, 10rem);
+            a {
+                width: 10em;
+            }
+        }
+    }
+}
