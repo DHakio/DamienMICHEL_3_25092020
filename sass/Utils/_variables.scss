@@ -2,3 +2,20 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-grey: #f6f6f6;
+
+$line-nb: 10;
+$line-anim-duration: 2000ms;
+$line-delay: $line-anim-duration / $line-nb;
+
+@keyframes lines {
+    from {
+        opacity: 0;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+    to {
+        opacity: 1;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}

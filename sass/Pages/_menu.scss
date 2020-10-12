@@ -45,13 +45,14 @@
             @include y-margin(1rem);
         }
         &__line {
+            opacity: 0;
             background-color: white;
             @include shadow;
             box-sizing: border-box;
             height: 10rem;
             width: 100%;
             border-radius: 2rem;
-            @include y-margin(2rem);
+            @include y-margin(5rem);
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -68,6 +69,13 @@
             }
             :nth-child(3) {
                 font-weight: bold;
+            }
+            animation: lines $line-anim-duration;
+            animation-fill-mode: forwards;
+            @for $i from 1 through $line-nb {
+                &--#{$i} {
+                    animation-delay: $line-delay * $i;
+                }
             }
         }
         &__button {
