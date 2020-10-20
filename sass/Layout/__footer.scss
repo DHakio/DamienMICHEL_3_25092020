@@ -3,19 +3,45 @@
     color: white;
     @include y-padding(2rem, 4rem);
     @include x-padding(4rem);
+
+    @include not-mobile { /* DESKTOP AND TABLET VERSION */
+        @include y-padding(0);
+        @include x-padding(0);
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__title {
         font-family: "Special";
         font-size: 2.8em;
+        @include not-mobile { /* DESKTOP AND TABLET VERSION */
+            font-size: 1.5vw;
+            @include x-padding(2vw);
+        }
     }
     &__links {
         @include x-padding(0);
         list-style: none;
+        @include not-mobile { /* DESKTOP AND TABLET VERSION */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include x-padding(2vw);
+            width: 50vw;
+        }
         i {
             width: 4rem;
+            @include not-mobile { /* DESKTOP AND TABLET VERSION */
+                width: auto;
+                @include x-margin(0.5vw);
+            }
         }
         li {
             font-size: 2.5em;
             @include y-margin(0.5em);
+            @include not-mobile { /* DESKTOP AND TABLET VERSION */
+                font-size: 1vw;
+            }
         }
     }
 }

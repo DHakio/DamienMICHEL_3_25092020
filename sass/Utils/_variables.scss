@@ -9,3 +9,7 @@ $content-animation: 1000ms;
 $line-nb: 10;
 $line-anim-duration: 2000ms;
 $line-delay: $line-anim-duration / $line-nb;
+
+$breakpoints: (
+    mobile: 480px
+)

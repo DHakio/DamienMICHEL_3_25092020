@@ -16,15 +16,23 @@
         justify-content: center;
         i {
             font-size: 3.5em;
+            
         }
     }
     &__image {
         width: 28rem;
+        @include not-mobile { /* DESKTOP AND TABLET VERSION */
+            width: 10vw;
+        }
     }
     &--next {
         align-content: unset;
     }
     &--loader {
         animation: omf-loader $loading-duration 3
+    }
+
+    @include not-mobile { /* DESKTOP AND TABLET VERSION */
+        height: 3vw;
     }
 }

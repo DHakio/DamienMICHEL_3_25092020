@@ -3,8 +3,15 @@
     height: 5rem;
     width: 5rem;
     cursor: pointer;
+    @include not-mobile { /* DESKTOP AND TABLET VERSION */
+        height: 1vw;
+        width: 1vw;
+    }
     &__icon {
         font-size: 3.5em;
+        @include not-mobile { /* DESKTOP AND TABLET VERSION */
+            font-size: 1vw;
+        }
         &--active {
             font-size: 0px;
             background: linear-gradient($color-primary, $color-secondary);
@@ -12,9 +19,13 @@
             -webkit-text-fill-color: transparent;
             transition-property: font-size;
             transition-duration: 200ms;
+            
         }
         &:hover ~ &--active, &--active:hover {
             font-size: 3.2em;
+            @include not-mobile { /* DESKTOP AND TABLET VERSION */
+                font-size: 0.9vw;
+            }
         }
     }
     &__icon, &__icon--active {

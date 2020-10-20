@@ -1,6 +1,10 @@
 .card {
     display: flex;
     flex-direction: column;
+    @include not-mobile { /* DESKTOP AND TABLET VERSION */
+        width: 49vw;
+        @include y-margin(0.7vw, 0);
+    }
     &__header {
         background-color: darken($color-grey, 5%);
         height: 8rem;
@@ -9,10 +13,16 @@
         justify-content: center;
         align-items: center;
         font-weight: bold;
-
+        @include not-mobile { /* DESKTOP AND TABLET VERSION */
+            height: 3vw;
+        }
         i, p {
             margin-right: 2rem;
             font-size: 2.5em;
+            @include not-mobile { /* DESKTOP AND TABLET VERSION */
+                font-size: 1vw;
+                @include x-margin(0, 2vw);
+            }
         }
 
     }
@@ -26,6 +36,12 @@
         @include x-padding(4rem);
         @include y-padding(7rem);
 
+        @include not-mobile { /* DESKTOP AND TABLET VERSION */
+            @include fixed-height(20vw);
+            @include x-padding(0);
+            @include y-padding(4vw);
+        }
+
         &__title {
             @include y-margin(0);
             @include title;
@@ -34,10 +50,15 @@
         }
 
         p {
-            @include y-margin(0);
-            margin-top: -4rem;
+            @include y-margin(-4rem, 0);
             font-size: 2.8rem;
             text-align: center;
+
+            @include not-mobile { /* DESKTOP AND TABLET VERSION */
+                font-size: 1vw;
+                @include y-margin(-4w, 0);
+                
+            }
         }
     }
 }
@@ -49,24 +70,47 @@
     @include x-padding(5rem, 3rem);
     display: flex;
     flex-direction: column;
+    @include not-mobile { /* DESKTOP AND TABLET VERSION */
+        width: 50vw;
+        @include y-margin(0.7vw, 0);
+        @include y-padding(0);
+        @include fixed-height(23vw);
+    }
     &__title {
         @include title;
     }
     &__step {
         background-color: $color-grey;
-        margin-left: 2rem;
         @include y-margin(1.5rem);
         @include fixed-height(10rem);
         @include shadow;
         border-radius: 3rem;
         display: flex;
         align-items: center;
+
+        @include not-mobile { /* DESKTOP AND TABLET VERSION */
+            @include y-margin(0.5vw);
+            @include x-margin(2vw, 0);
+            @include fixed-height(4.5vw);
+            border-radius: 1vw;
+        }
+
         &__content {
-            margin-left: -2rem;
+            @include x-margin(-2rem, 0);
             font-size: 2.5em;
             font-weight: bold;
+
+            @include not-mobile { /* DESKTOP AND TABLET VERSION */
+                font-size: 1.3vw;
+                @include x-margin(-0.8vw, 0);
+            }
+
             * {
-                margin-right: 2rem;
+                @include x-margin(0, 2rem);
+                @include not-mobile { /* DESKTOP AND TABLET VERSION */
+                    @include x-margin(0, 2vw);
+                }
+                
             }
             span {
                 background-color: $color-primary;
@@ -75,8 +119,15 @@
                 color: white;
                 @include y-padding(0.5rem);
                 @include x-padding(1.2rem);
+
+                @include not-mobile { /* DESKTOP AND TABLET VERSION */
+                    font-size: 0.8vw;
+                    @include y-padding(0.4vw);
+                    @include x-padding(0.6vw);
+                }
             }
         }
+        
     }
     &_step--last {
         background-color: lighten($color-primary, 35%);
@@ -91,19 +142,43 @@
     background-color: $color-grey;
     @include x-padding(3rem);
     @include y-padding(4rem, 7rem);
+
+    @include not-mobile { /* DESKTOP AND TABLET VERSION */
+       @include x-padding(3vw);
+       @include y-padding(0vw, 0vw);
+       display: flex;
+       flex-wrap: wrap;
+       width: 100vw;
+       justify-content: space-between;
+       background-color: white;
+    }
+
     &__title {
         @include title;
+        @include not-mobile { /* DESKTOP AND TABLET VERSION */
+            width: 100%;
+        }
     }
     &__card {
         display: flex;
         flex-direction: column;
         border-radius: 3em;
         overflow: hidden;
-        margin-bottom: 3rem;
+        @include y-margin(0, 3rem);
         @include shadow;
+
+        @include not-mobile { /* DESKTOP AND TABLET VERSION */
+            border-radius: 1vw;
+            @include y-margin(0, 3vw);
+            width: 22vw;
+        }
+
         &__image {
             position: relative;
             height: 30em;
+            @include not-mobile { /* DESKTOP AND TABLET VERSION */
+                height: 10vw;
+            }
             img {
                 position: absolute;
                 height: 100%;
@@ -121,6 +196,15 @@
                 font-size: 2em;
                 font-weight: bold;
                 border-radius: 0.5rem;
+
+                @include not-mobile { /* DESKTOP AND TABLET VERSION */
+                    top: 0.5vw;
+                    right: 0.5vw;
+                    @include y-padding(0.2vw);
+                    @include x-padding(0.5vw);
+                    font-size: 0.8vw;
+                    border-radius: 0.2vw;
+                }
             }
         }
         &__label {
@@ -130,6 +214,12 @@
             display: flex;
             justify-content: space-between;
 
+            @include not-mobile { /* DESKTOP AND TABLET VERSION */
+                @include x-padding(1vw);
+                @include y-padding(0.5vw);
+                background-color: $color-grey
+            }
+
             div:nth-child(1) {
                 display: flex;
                 flex-direction: column;
@@ -137,13 +227,20 @@
             div:nth-child(2) {
                 position: relative;
                 width: 7rem;
+
+                @include not-mobile { /* DESKTOP AND TABLET VERSION */
+                    width: 1vw;
+                }
             }
             &__title, &__location {
                 font-size: 2.5em;
                 @include y-margin(0);
+                @include not-mobile { /* DESKTOP AND TABLET VERSION */
+                    font-size: 1vw;
+                }
             }
             &__title {
-                margin-bottom: 0.5rem;
+                @include y-margin(0, 0.5rem);
                 font-weight: bold;
             }
         }
@@ -157,4 +254,8 @@
     animation-fill-mode: forwards;
     animation-duration: $content-animation;
     animation-delay: 3000ms;
+    @include not-mobile { /* DESKTOP AND TABLET VERSION */
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
