@@ -1,0 +1,57 @@
+@keyframes omf-loader {
+    96% {
+        transform: scale(1);
+    }
+    97% {
+        transform: scale(1.5);
+        fill: $color-tertiary;
+    }
+    98%{
+        transform: scale(1);
+        fill: black;
+    }
+    99% {
+        transform: scale(1.5);
+        fill: $color-tertiary;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes omf-content {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 100rem;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+@keyframes menu-lines {
+    from {
+        opacity: 0;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+    to {
+        opacity: 1;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
