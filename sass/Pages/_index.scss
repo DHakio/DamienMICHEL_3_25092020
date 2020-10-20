@@ -16,7 +16,7 @@
         @include not-mobile { /* DESKTOP AND TABLET VERSION */
             height: 3vw;
         }
-        i, p {
+        i, h3 {
             margin-right: 2rem;
             font-size: 2.5em;
             @include not-mobile { /* DESKTOP AND TABLET VERSION */
