@@ -56,6 +56,17 @@ BODY {
     margin-bottom: 2rem;
   }
 }
+@media screen and (min-device-width: 480px) {
+  /* DESKTOP AND TABLET VERSION */
+  @keyframes menu-lines {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -85,6 +96,12 @@ BODY {
 }
 .header__previous i {
   font-size: 3.5em;
+}
+@media screen and (min-device-width: 480px) {
+  .header__previous i {
+    /* DESKTOP AND TABLET VERSION */
+    font-size: 1.5vw;
+  }
 }
 .header__image {
   width: 28rem;
@@ -152,7 +169,7 @@ BODY {
     align-items: center;
     padding-left: 2vw;
     padding-right: 2vw;
-    width: 50vw;
+    width: 40vw;
   }
 }
 .footer__links i {
@@ -358,8 +375,6 @@ BODY {
   .howto {
     /* DESKTOP AND TABLET VERSION */
     width: 50vw;
-    margin-top: 0.7vw;
-    margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 0;
     box-sizing: border-box;
@@ -618,6 +633,12 @@ BODY {
   height: 45rem;
   position: relative;
 }
+@media screen and (min-device-width: 480px) {
+  .menu__image {
+    /* DESKTOP AND TABLET VERSION */
+    height: 15vw;
+  }
+}
 .menu__image img {
   position: absolute;
   height: 100%;
@@ -638,6 +659,16 @@ BODY {
   padding-left: 4rem;
   padding-right: 4rem;
 }
+@media screen and (min-device-width: 480px) {
+  .menu__image__title {
+    /* DESKTOP AND TABLET VERSION */
+    height: 5vw;
+    top: 10vw;
+    left: 15vw;
+    width: 70vw;
+    border-radius: 3vw 3vw 0 0;
+  }
+}
 .menu__image__title h1 {
   font-family: "special";
   font-size: 3.6em;
@@ -657,11 +688,32 @@ BODY {
   padding-left: 4rem;
   padding-right: 4rem;
 }
+@media screen and (min-device-width: 480px) {
+  .menu__content {
+    /* DESKTOP AND TABLET VERSION */
+    width: 70vw;
+    margin-left: 15vw;
+    box-sizing: border-box;
+  }
+  .menu__content__type {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
 .menu__content h2 {
   margin-top: 6rem;
   margin-bottom: 0;
   font-size: 2.5em;
   font-weight: normal;
+}
+@media screen and (min-device-width: 480px) {
+  .menu__content h2 {
+    /* DESKTOP AND TABLET VERSION */
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.5vw;
+  }
 }
 .menu__content hr {
   width: 6.5rem;
@@ -672,6 +724,15 @@ BODY {
   margin-right: 0;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+@media screen and (min-device-width: 480px) {
+  .menu__content hr {
+    /* DESKTOP AND TABLET VERSION */
+    width: 4vw;
+    height: 0.2vw;
+    margin-top: 0.2vw;
+    margin-bottom: 0.2vw;
+  }
 }
 .menu__content__line {
   cursor: pointer;
@@ -719,15 +780,37 @@ BODY {
 .menu__content__line--10 {
   animation-delay: 2000ms;
 }
+@media screen and (min-device-width: 480px) {
+  .menu__content__line {
+    /* DESKTOP AND TABLET VERSION */
+    border-radius: 1vw;
+    width: 20vw;
+    height: 4vw;
+    margin-top: 1vw;
+    margin-bottom: 1.5vw;
+  }
+}
 .menu__content__line h3 {
   font-size: 2.5em;
   margin-top: 0;
   margin-bottom: 0;
 }
+@media screen and (min-device-width: 480px) {
+  .menu__content__line h3 {
+    /* DESKTOP AND TABLET VERSION */
+    font-size: 0.9vw;
+  }
+}
 .menu__content__line p {
   font-size: 2.2em;
   margin-top: 0;
   margin-bottom: 0;
+}
+@media screen and (min-device-width: 480px) {
+  .menu__content__line p {
+    /* DESKTOP AND TABLET VERSION */
+    font-size: 0.8vw;
+  }
 }
 .menu__content__line > * {
   width: 100%;
@@ -739,6 +822,15 @@ BODY {
   padding-right: 3rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+@media screen and (min-device-width: 480px) {
+  .menu__content__line__main {
+    /* DESKTOP AND TABLET VERSION */
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+  }
 }
 .menu__content__line__main div {
   display: flex;
@@ -752,7 +844,15 @@ BODY {
 }
 .menu__content__line__main div p:nth-child(2) {
   margin-left: 2rem;
+  margin-right: 0;
   font-weight: bold;
+}
+@media screen and (min-device-width: 480px) {
+  .menu__content__line__main div p:nth-child(2) {
+    /* DESKTOP AND TABLET VERSION */
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+  }
 }
 .menu__content__line__hover {
   width: 0;
@@ -767,6 +867,12 @@ BODY {
   color: white;
   font-size: 3.5rem;
 }
+@media screen and (min-device-width: 480px) {
+  .menu__content__line__hover i {
+    /* DESKTOP AND TABLET VERSION */
+    font-size: 1.2vw;
+  }
+}
 .menu__content__line :hover p:nth-child(1) {
   min-width: 0;
   overflow: hidden;
@@ -776,6 +882,12 @@ BODY {
 :hover ~ .menu__content__line__hover {
   width: 10rem;
 }
+@media screen and (min-device-width: 480px) {
+  :hover ~ .menu__content__line__hover {
+    /* DESKTOP AND TABLET VERSION */
+    width: 5vw;
+  }
+}
 :hover ~ .menu__content__line__hover i {
   animation: rotation 500ms;
 }
@@ -784,6 +896,13 @@ BODY {
   justify-content: center;
   margin-top: 8rem;
   margin-bottom: 10rem;
+}
+@media screen and (min-device-width: 480px) {
+  .menu__content__button {
+    /* DESKTOP AND TABLET VERSION */
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
 }
 .menu__content__button a {
   width: 10em;

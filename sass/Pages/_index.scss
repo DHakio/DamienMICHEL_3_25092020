@@ -72,7 +72,6 @@
     flex-direction: column;
     @include not-mobile { /* DESKTOP AND TABLET VERSION */
         width: 50vw;
-        @include y-margin(0.7vw, 0);
         @include y-padding(0);
         @include fixed-height(23vw);
     }
