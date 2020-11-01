@@ -15,11 +15,11 @@
         &--active {
             font-size: 0px;
             background: linear-gradient($color-primary, $color-secondary);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             transition-property: font-size;
             transition-duration: 200ms;
-            
         }
         &:hover ~ &--active, &--active:hover {
             font-size: 3.2em;
